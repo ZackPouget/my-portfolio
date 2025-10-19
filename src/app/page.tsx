@@ -1,103 +1,64 @@
-import Image from "next/image";
+// app/page.tsx
+import Card from "@/components/card";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-gray-50 text-gray-800">
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center text-center py-16 px-6">
+        <h1 className="text-5xl font-bold mb-4">Hi, I’m Zack Pouget</h1>
+        <h2 className="text-2xl text-gray-600 mb-6">Software Developer</h2>
+        <p className="max-w-2xl text-lg text-gray-500">
+          I build modern, performant web applications using{" "}
+          <strong>React</strong>, <strong>Svelte</strong>, and{" "}
+          <strong>TypeScript</strong>. I love clean code, accessible design, and
+          creating delightful user experiences.
+        </p>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      {/* Skills Section */}
+      <section className="py-20 bg-white text-center">
+        <h3 className="text-3xl font-semibold mb-8">My Tech Stack</h3>
+        <div className="flex flex-wrap justify-center gap-8">
+          <Card
+            title={"React"} 
+            content={"Component-driven UI with hooks & state."}
+          />
+          <Card
+            title={"Svelte"} 
+            content={"Reactive UI with minimal overhead."}
+          />
+          <Card
+            title={"TypeScript"} 
+            content={"Type-safe and maintainable codebase."}
+          />
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-grey-50 text-center">
+        <h3 className="text-3xl font-semibold mb-8">Get In Touch</h3>
+        <p className="text-gray-600 mb-4">
+          Interested in collaborating or learning more?
+        </p>
+        <div className="flex justify-center gap-6">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:zackpouget@gmail.com"
+            className="text-blue-600 hover:underline"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Email
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/ZackPouget"
+            className="text-blue-600 hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            GitHub
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
