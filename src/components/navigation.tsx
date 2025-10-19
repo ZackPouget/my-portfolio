@@ -33,7 +33,7 @@ export default function Navigation() {
 
       {/* Mobile Hamburger Button */}
       <button
-        className="md:hidden flex flex-col justify-between w-6 h-4 focus:outline-none"
+        className="md:hidden flex flex-col justify-between w-6 h-4 focus:outline-none cursor-pointer"
         onClick={() => setMenuOpen(true)}
         aria-label="Open menu"
       >
