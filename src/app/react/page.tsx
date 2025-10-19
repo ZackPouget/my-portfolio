@@ -6,7 +6,7 @@ export const metadata = {
 
 export default function ReactPage() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16 bg-gray-50">
+    <main className="max-w-3xl md:mx-auto px-6 py-16 bg-gray-50">
       <h1 className="text-4xl font-bold mb-4 text-gray-900">React</h1>
       <p className="text-lg text-gray-700 mb-10">
         As one of the most popular UI frameworks, React was one of the first tools
