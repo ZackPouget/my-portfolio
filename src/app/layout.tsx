@@ -1,7 +1,6 @@
 // app/layout.tsx
 import Navigation from '@/components/navigation';
 import './globals.css';
-import Link from "next/link";
 
 export const metadata = {
   title: "Zack Pouget | Portfolio",

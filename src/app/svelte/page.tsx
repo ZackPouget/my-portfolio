@@ -8,9 +8,9 @@ export default function SveltePage() {
     <main className="max-w-3xl md:mx-auto px-6 py-16 bg-gray-50">
       <h1 className="text-4xl font-bold mb-4 text-gray-900">Svelte</h1>
       <p className="text-lg text-gray-700 mb-10">
-        Svelte is an easy to use alternative to React that I've grown to love.
+        Svelte is an easy to use alternative to React that I&apos;ve grown to love.
         I personally find it to be easier to use, but I also find it to be more
-        performant. Both of these are due to Svelte's compiler, which not only 
+        performant. Both of these are due to Svelte&apos;s compiler, which not only 
         allow Svelte to add to and modify vanilla Javascript and Typescript,
         but also removes the need for a virtual DOM like React
       </p>

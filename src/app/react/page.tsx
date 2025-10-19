@@ -30,7 +30,7 @@ export default function ReactPage() {
       <section>
         <h2 className="text-2xl font-semibold text-gray-600 mb-3">Example Code</h2>
         <p className="text-gray-700 mb-4">
-          Here's an example component that simply increments a count whenever a button is clicked
+          Here&apos;s an example component that simply increments a count whenever a button is clicked
         </p>
 
         <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed shadow-inner">
