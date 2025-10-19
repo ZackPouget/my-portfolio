@@ -1,7 +1,7 @@
 // app/react/page.tsx
 export const metadata = {
   title: "React | Zack Pouget",
-  description: "Projects and experience using React",
+  description: "Experience using React",
 };
 
 export default function ReactPage() {
@@ -9,22 +9,52 @@ export default function ReactPage() {
     <main className="max-w-3xl mx-auto px-6 py-16 bg-gray-50">
       <h1 className="text-4xl font-bold mb-4 text-gray-900">React</h1>
       <p className="text-lg text-gray-700 mb-10">
-        React is my primary front-end framework, and I’ve used it extensively to
-        build responsive, component-based web applications. I enjoy structuring
-        reusable UI systems, optimizing rendering performance, and working with
-        TypeScript for type-safe, scalable codebases.
+        As one of the most popular UI frameworks, React was one of the first tools
+        I used to create websites. Even this website is built using React! While
+        my preference is now to use Svelte for my own projects, I feel perfectly
+        comfortable using React for UI.
       </p>
 
       {/* Key Skills */}
-      <section className="mb-12 text-gray-600">
-        <h2 className="text-2xl font-semibold mb-3">Key Skills</h2>
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold text-gray-600 mb-3">Key Skills</h2>
         <ul className="list-disc list-inside text-gray-700 space-y-1">
           <li>React Hooks and functional components</li>
-          <li>Context API and state management (Redux, Zustand)</li>
+          <li>Context API and state management (Redux, Immer)</li>
           <li>Server Components and Next.js integration</li>
-          <li>Custom hooks and reusable component design</li>
           <li>Optimizing rendering and bundle performance</li>
         </ul>
+      </section>
+
+      {/* Example Code */}
+      <section>
+        <h2 className="text-2xl font-semibold text-gray-600 mb-3">Example Code</h2>
+        <p className="text-gray-700 mb-4">
+          Here's an example component that simply increments a count whenever a button is clicked
+        </p>
+
+        <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed shadow-inner">
+          <code>{
+`import { useState } from "react";
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="p-4 border rounded-md shadow-sm text-center">
+      <h2 className="text-xl font-semibold mb-2">React Counter Example</h2>
+      <p className="text-gray-700 mb-4">Count: {count}</p>
+      <button
+        onClick={() => setCount(count + 1)}
+        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+      >
+        Increment
+      </button>
+    </div>
+  );
+}`  
+          }</code>
+        </pre>
       </section>
     </main>
   );
