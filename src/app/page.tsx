@@ -7,7 +7,7 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50 text-gray-800">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center py-16 px-6">
-        <h1 className="text-5xl font-bold mb-4">Hi, I’m Zack Pouget</h1>
+        <h1 className="text-5xl font-bold mb-4">Hi, I'm Zack Pouget</h1>
         <h2 className="text-2xl text-gray-600 mb-6">Software Developer</h2>
         <p className="max-w-2xl text-lg text-gray-500">
           I build modern, performant web applications using{" "}

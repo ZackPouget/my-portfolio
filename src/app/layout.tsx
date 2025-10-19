@@ -15,12 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans bg-gray-50">
+      <body className="font-sans bg-gray-50 min-h-screen flex flex-col">
         <Navigation/>
 
         {children}
 
-        <footer className="text-center py-6 text-gray-500 text-sm bg-white">
+        <footer className="mt-auto text-center py-6 text-gray-500 text-sm bg-white">
           © {new Date().getFullYear()} Zack Pouget — Built with Next.js
         </footer>
       </body>
