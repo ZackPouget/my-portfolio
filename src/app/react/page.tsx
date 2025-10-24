@@ -1,41 +1,13 @@
+import ExampleCode from "@/components/exampleCode";
+import KeySkills from "@/components/keySkills";
+
 // app/react/page.tsx
 export const metadata = {
   title: "React | Zack Pouget",
   description: "Experience using React",
 };
 
-export default function ReactPage() {
-  return (
-    <main className="max-w-3xl md:mx-auto px-6 py-16 bg-gray-50">
-      <h1 className="text-4xl font-bold mb-4 text-gray-900">React</h1>
-      <p className="text-lg text-gray-700 mb-10">
-        As one of the most popular UI frameworks, React was one of the first tools
-        I used to create websites. Even this website is built using React! While
-        my preference is now to use Svelte for my own projects, I feel perfectly
-        comfortable using React for UI.
-      </p>
-
-      {/* Key Skills */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-600 mb-3">Key Skills</h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          <li>React Hooks and functional components</li>
-          <li>Context API and state management (Redux, Immer)</li>
-          <li>Server Components and Next.js integration</li>
-          <li>Optimizing rendering and bundle performance</li>
-        </ul>
-      </section>
-
-      {/* Example Code */}
-      <section>
-        <h2 className="text-2xl font-semibold text-gray-600 mb-3">Example Code</h2>
-        <p className="text-gray-700 mb-4">
-          Here&apos;s an example component that simply increments a count whenever a button is clicked
-        </p>
-
-        <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed shadow-inner">
-          <code>{
-`import { useState } from "react";
+const code = `import { useState } from "react";
 
 export default function Counter() {
   const [count, setCount] = useState(0);
@@ -53,9 +25,27 @@ export default function Counter() {
     </div>
   );
 }`  
-          }</code>
-        </pre>
-      </section>
+
+export default function ReactPage() {
+  return (
+    <main className="max-w-3xl md:mx-auto px-6 py-16 bg-gray-50">
+      <h1 className="text-4xl font-bold mb-4 text-gray-900">React</h1>
+      <p className="text-lg text-gray-700 mb-10">
+        As one of the most popular UI frameworks, React was one of the first tools
+        I used to create websites. Even this website is built using React! While
+        my preference is now to use Svelte for my own projects, I feel perfectly
+        comfortable using React for UI.
+      </p>
+
+      <KeySkills skills={[
+        "React Hooks and functional components",
+        "Context API and state management (Redux, Immer)",
+        "Server Components and Next.js integration",
+        "Optimizing rendering and bundle performance"
+      ]}/>
+
+      {/* Example Code */}
+      <ExampleCode description="Here&apos;s an example component that simply increments a count whenever a button is clicked" code={code}/>
     </main>
   );
 }

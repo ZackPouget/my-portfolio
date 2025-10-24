@@ -1,7 +1,24 @@
+import ExampleCode from "@/components/exampleCode";
+import KeySkills from "@/components/keySkills";
+
 export const metadata = {
   title: "TypeScript | Zack Pouget",
   description: "Experience using TypeScript",
 };
+
+const code = `type User = {
+  id: number;
+  name: string;
+  email?: string; // Optional property
+};
+
+function greetUser(user: User): string {
+  return \`Hello, \${user.name}!\`;
+}
+
+// Example usage
+const zack: User = { id: 1, name: "Zack Pouget" };
+console.log(greetUser(zack));`
 
 export default function TypeScriptPage() {
   return (
@@ -16,42 +33,19 @@ export default function TypeScriptPage() {
       </p>
 
       {/* Key Skills */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-600 mb-3">Key Skills</h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          <li>Designing and implementing complex types and interfaces</li>
-          <li>Using generics for reusable, type-safe code</li>
-          <li>Integrating TypeScript with React and Svelte projects</li>
-          <li>Leveraging utility types for flexible and maintainable code</li>
-        </ul>
-      </section>
+      <KeySkills skills={[
+        "Designing and implementing complex types and interfaces",
+        "Using generics for reusable, type-safe code",
+        "Integrating TypeScript with React and Svelte projects",
+        "Leveraging utility types for flexible and maintainable code"
+      ]}/>
 
       {/* Example Code */}
-      <section>
-        <h2 className="text-2xl font-semibold text-gray-600 mb-3">Example Code</h2>
-        <p className="text-gray-700 mb-4">
-          Here’s an example of how TypeScript’s type system can help enforce
-          structure and improve reliability while maintaining flexibility.
-        </p>
-
-        <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed shadow-inner">
-          <code>{
-`type User = {
-  id: number;
-  name: string;
-  email?: string; // Optional property
-};
-
-function greetUser(user: User): string {
-  return \`Hello, \${user.name}!\`;
-}
-
-// Example usage
-const zack: User = { id: 1, name: "Zack Pouget" };
-console.log(greetUser(zack));`  
-          }</code>
-        </pre>
-      </section>
+      <ExampleCode 
+        description="Here&apos;s an example of how &apos;s type system can help enforce
+          structure and improve reliability while maintaining flexibility."
+        code={code}
+      />
     </main>
   );
 }
