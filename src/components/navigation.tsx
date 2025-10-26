@@ -12,7 +12,7 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="flex justify-between items-center px-6 py-4 bg-white text-gray-600 shadow-sm relative">
+    <header className="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-700 text-gray-600 dark:text-gray-300 shadow-sm relative">
       {/* Logo / Name */}
       <Link href="/" className="text-xl font-bold">
         Zack Pouget
@@ -68,7 +68,7 @@ export default function Navigation() {
           <Link
             key={link.href}
             href={link.href}
-            className="text-lg text-gray-700 hover:text-blue-600 transition-colors"
+            className="text-lg text-gray-700 hover:text-blue-600 dark:hover:text-sky-600 transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             {link.title}

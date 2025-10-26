@@ -19,7 +19,7 @@ export default function RootLayout({
 
         {children}
 
-        <footer className="mt-auto text-center py-6 text-gray-500 text-sm bg-white">
+        <footer className="mt-auto text-center py-6 text-gray-500 dark:text-gray-400 text-sm bg-white dark:bg-gray-700">
           © {new Date().getFullYear()} Zack Pouget — Built with Next.js
         </footer>
       </body>
