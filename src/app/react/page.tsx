@@ -28,9 +28,9 @@ export default function Counter() {
 
 export default function ReactPage() {
   return (
-    <main className="max-w-3xl md:mx-auto px-6 py-16 bg-gray-50">
-      <h1 className="text-4xl font-bold mb-4 text-gray-900">React</h1>
-      <p className="text-lg text-gray-700 mb-10">
+    <main className="max-w-3xl md:mx-auto px-6 py-16 bg-gray-50 dark:bg-gray-800">
+      <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-100">React</h1>
+      <p className="text-lg text-gray-700 dark:text-gray-200 mb-10">
         As one of the most popular UI frameworks, React was one of the first tools
         I used to create websites. Even this website is built using React! While
         my preference is now to use Svelte for my own projects, I feel perfectly
@@ -44,7 +44,6 @@ export default function ReactPage() {
         "Optimizing rendering and bundle performance"
       ]}/>
 
-      {/* Example Code */}
       <ExampleCode description="Here&apos;s an example component that simply increments a count whenever a button is clicked" code={code}/>
     </main>
   );

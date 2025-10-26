@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans bg-gray-50 min-h-screen flex flex-col">
+      <body className="font-sans bg-gray-50 dark:bg-gray-800 min-h-screen flex flex-col">
         <Navigation/>
 
         {children}
