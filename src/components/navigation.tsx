@@ -37,9 +37,9 @@ export default function Navigation() {
         onClick={() => setMenuOpen(true)}
         aria-label="Open menu"
       >
-        <span className="h-0.5 bg-gray-700" />
-        <span className="h-0.5 bg-gray-700" />
-        <span className="h-0.5 bg-gray-700" />
+        <span className="h-0.5 bg-gray-700 dark:bg-gray-200" />
+        <span className="h-0.5 bg-gray-700 dark:bg-gray-200" />
+        <span className="h-0.5 bg-gray-700 dark:bg-gray-200" />
       </button>
 
       {/* Mobile Sidebar + Overlay */}
@@ -53,12 +53,12 @@ export default function Navigation() {
 
       {/* Sidebar panel */}
       <nav
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-20 flex flex-col p-6 space-y-6 transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-900 shadow-lg z-20 flex flex-col p-6 space-y-6 transform transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <button
-          className="self-end text-gray-500 hover:text-gray-700"
+          className="self-end text-gray-600 dark:text-gray-300"
           onClick={() => setMenuOpen(false)}
           aria-label="Close menu"
         >
@@ -68,7 +68,7 @@ export default function Navigation() {
           <Link
             key={link.href}
             href={link.href}
-            className="text-lg text-gray-700 hover:text-blue-600 dark:hover:text-sky-600 transition-colors"
+            className="text-lg text-gray-700 dark:text-gray-200 transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             {link.title}

@@ -22,9 +22,9 @@ console.log(greetUser(zack));`
 
 export default function TypeScriptPage() {
   return (
-    <main className="max-w-3xl md:mx-auto px-6 py-16 bg-gray-50">
-      <h1 className="text-4xl font-bold mb-4 text-gray-900">TypeScript</h1>
-      <p className="text-lg text-gray-700 mb-10">
+    <main className="max-w-3xl md:mx-auto px-6 py-16 bg-gray-50 dark:bg-gray-800">
+      <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">TypeScript</h1>
+      <p className="text-lg text-gray-700 dark:text-gray-200 mb-10">
         TypeScript has become an essential part of my development process.
         It enhances JavaScript with strong typing, interfaces, and modern
         tooling support, making my codebase more predictable, scalable, and
